@@ -1,6 +1,6 @@
 # CleanYourTV Desktop
 
-A desktop app for the same job as [PROMPT.md](../PROMPT.md): connect to an Android TV or Google TV
+A desktop app for the same job as [PROMPT.md](https://github.com/Gathin23/cleanyourtv/blob/main/PROMPT.md): connect to an Android TV or Google TV
 over Wi-Fi ADB, take a backup, debloat it by the project's rules, browse its files, and dress its
 launcher. Linux, Windows and macOS, on amd64 and arm64.
 
@@ -95,7 +95,7 @@ To *build* it, Node.js 20+, Rust stable and the Tauri system libraries for your 
 packages and commands are in [Build and run](#build-and-run) below.
 
 For the *build and install* half of the Launcher screen only: **JDK 17** and **Android SDK platform
-34** (the same as [CONTRIBUTING.md](../CONTRIBUTING.md)). Debloating, files, screenshots and the
+34** (the same as [CONTRIBUTING.md](https://github.com/Gathin23/cleanyourtv/blob/main/CONTRIBUTING.md)). Debloating, files, screenshots and the
 theme overlay work without them. The app looks for a 17 to 21 JDK by itself (`JAVA_HOME`, Gradle's
 own `~/.gradle/jdks`, the distro's `/usr/lib/jvm`, Android Studio's `jbr`); on a newer JDK it still
 builds the APK and skips Gradle's `lintVital`, which the repo's CI runs instead.
@@ -173,12 +173,12 @@ cd src-tauri && cargo test             # the Rust side: safety rules, allowlists
 ```
 
 If you also touched the repository's own tools, lists or launcher, run the project's suite from the
-repository root as [CONTRIBUTING.md](../CONTRIBUTING.md) describes:
+repository root as [CONTRIBUTING.md](https://github.com/Gathin23/cleanyourtv/blob/main/CONTRIBUTING.md) describes:
 `tools/venv/bin/python -m unittest discover -s tests -v`.
 
 ### First run on a TV
 
-This is [PROMPT.md](../PROMPT.md)'s order, in the app. Take a screenshot between the steps
+This is [PROMPT.md](https://github.com/Gathin23/cleanyourtv/blob/main/PROMPT.md)'s order, in the app. Take a screenshot between the steps
 (`tools/tv.py --screenshot shots/01.png`, or the Overview screen) so the TV is checked as it goes,
 and leave the stock launcher enabled until the new one has taken Home.
 
@@ -238,7 +238,7 @@ Every artefact lands under `src-tauri/target/release/bundle/`:
 Measured on Linux amd64: the `.deb` and the `.rpm` are 2.4 MB each, and the AppImage is 80 MB
 because it carries its own WebKitGTK instead of using the system's. The app itself is small: it
 bundles neither `adb` nor an APK, and keeps no network client at all. That is deliberate — see
-[Hard rules](../AGENTS.md) — and the same reason the launcher itself stays under 576 KB. Prefer the
+[Hard rules](https://github.com/Gathin23/cleanyourtv/blob/main/AGENTS.md) — and the same reason the launcher itself stays under 576 KB. Prefer the
 `.deb` or the `.rpm` where you can; reach for the AppImage only on a distro those two do not cover.
 
 Windows and macOS, from their own machines:
